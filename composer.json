@@ -1,0 +1,29 @@
+{
+    "name": "od/utils",
+    "description": "misc utils",
+    "type": "library",
+    "require": {
+        "php": ">=7.3.0",
+        "php-curl-class/php-curl-class": "^9.13"
+    },
+    "require-dev": {
+        "phpspec/prophecy": "^1.5",
+        "phpunit/phpunit": "^4.8 || ^5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Od\\Utils\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Od\\Utils\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
