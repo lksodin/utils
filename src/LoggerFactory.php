@@ -14,21 +14,7 @@ class LoggerFactory
     {
     }
 
-    public function getLogger($logger_type = 'stdout')
-    {
-        switch ($logger_type) {
-            case "file":
-                throw new RuntimeException("{$logger_type} not yet implemented");
-
-            case "stdout":
-            default:
-                $logger = $this->initStdoutLogger();
-        }
-
-        return $logger;
-    }
-
-    private function initStdoutLogger()
+    public function createStdoutLogger()
     {
         $formatter = new LineFormatter(self::DEFAULT_LOG_FORMAT, self::DEFAULT_DATETIME_FORMAT);
 
