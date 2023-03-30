@@ -4,7 +4,7 @@
     "type": "library",
     "require": {
         "php": ">=7.3.0",
-        "monolog/monolog": "^2.9",
+        "monolog/monolog": ">2.9",
         "php-curl-class/php-curl-class": "^9.13"
     },
     "require-dev": {

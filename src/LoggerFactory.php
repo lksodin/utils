@@ -8,6 +8,11 @@ use Monolog\Handler\StreamHandler;
 class LoggerFactory
 {
     const DEFAULT_LOG_FORMAT = "[%datetime%] %message%\n";
+    const DEFAULT_DATETIME_FORMAT = "Y-m-d H:i:s";
+
+    public function __construct()
+    {
+    }
 
     public function getLogger($logger_type = 'stdout')
     {
@@ -25,7 +30,7 @@ class LoggerFactory
 
     private function initStdoutLogger()
     {
-        $formatter = new LineFormatter(DEFAULT_LOG_FORMAT);
+        $formatter = new LineFormatter(self::DEFAULT_LOG_FORMAT, self::DEFAULT_DATETIME_FORMAT);
 
         $streamHandler = new StreamHandler('php://stdout', Logger::DEBUG);
         $streamHandler->setFormatter($formatter);
