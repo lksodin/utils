@@ -3,13 +3,13 @@ image: php:7.4
 test:
   stage: test
   script:
-    - apt-get update && apt-get -y install wget git zip build-essential libzip-dev 
+    - apt-get update && apt-get -y install wget git zip build-essential libzip-dev tree
     - wget https://getcomposer.org/download/latest-stable/composer.phar && chmod +x composer.phar
     - mv composer.phar /usr/local/bin/composer
     - composer install
     - vendor/bin/phpunit tests --coverage-clover=coverage.xml
     - pwd 
-    - ls
+    - tree
   artifacts:
     paths:
       - coverage.xml
