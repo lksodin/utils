@@ -3,6 +3,7 @@ image: php:7.4
 test:
   stage: test
   script:
+    - apt install wget
     - wget https://getcomposer.org/download/latest-stable/composer.phar && chmod +x composer.phar
     - mv composer.phar /usr/local/bin/composer
     - composer install
