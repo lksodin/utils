@@ -3,13 +3,13 @@
     "description": "misc utils",
     "type": "library",
     "require": {
-        "php": ">=8.1",
+        "php": ">=7.3",
         "monolog/monolog": ">2.9",
-        "php-curl-class/php-curl-class": "^9.13"
+        "php-curl-class/php-curl-class": ">9.13"
     },
     "require-dev": {
-        "phpspec/prophecy": "^1.5",
-        "phpunit/phpunit": "^4.8 || ^5.0"
+        "phpspec/prophecy": ">= 1.5",
+        "phpunit/phpunit": ">=8.5"
     },
     "autoload": {
         "psr-4": {
