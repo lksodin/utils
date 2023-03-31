@@ -8,6 +8,8 @@ test:
     - mv composer.phar /usr/local/bin/composer
     - composer install
     - vendor/bin/phpunit tests --coverage-clover=coverage.xml
+    - pwd 
+    - ls
   artifacts:
     paths:
       - coverage.xml
