@@ -1,13 +1,15 @@
 <?php
+//create phpunit testcases for LoggerFactory class
 namespace Od\Tests\Utils;
 
 use Od\Utils\LoggerFactory;
+use PHPUnit\Framework\TestCase;
 use Monolog\Logger;
 use Monolog\Formatter\LineFormatter;
 use Monolog\Handler\StreamHandler;
 use Monolog\Handler\TestHandler;
 
-class LoggerFactoryTest extends \PHPUnit_Framework_TestCase
+class LoggerFactoryTest extends TestCase
 {
     public function testCreateStdoutLogger()
     {
