@@ -3,7 +3,7 @@ image: php:7.4
 test:
   stage: test
   script:
-    - apt-get update && apt-get -y install wget git
+    - apt-get update && apt-get -y install wget git zip build-essential libzip-dev 
     - wget https://getcomposer.org/download/latest-stable/composer.phar && chmod +x composer.phar
     - mv composer.phar /usr/local/bin/composer
     - composer install
