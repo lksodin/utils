@@ -1,6 +1,9 @@
 <?php
 namespace Od\Utils;
 
+use \Exception;
+use \InvalidArgumentException;
+
 class DomainName
 {
     const DEFAULT_SUB_LENGTH = 8;
@@ -10,7 +13,7 @@ class DomainName
 
     public function __construct($domainName)
     {
-        if ($domainName = filter_var($domainName, FILTER_VALIDATE_DOMAIN)) {
+        if ($domainName = filter_var($domainName, FILTER_VALIDATE_DOMAIN, FILTER_FLAG_HOSTNAME)) {
             $domainNameParts = explode(".", $domainName);
             $this->level2 = implode('.', array_slice($domainNameParts, -2, 2));
             $this->sub = implode('.', array_slice($domainNameParts, 0, -2));
