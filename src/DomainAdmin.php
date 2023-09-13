@@ -69,7 +69,7 @@ class DomainAdmin
         }
 
         if (empty($domain_list)) {
-            throw new Exception("empty domain list returned: [{$raw_res}]");
+            throw new Exception("empty domain list returned: [{$raw_list}]");
         } else {
             return $domain_list;
         }
