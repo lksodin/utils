@@ -1,7 +1,8 @@
 <?php
 namespace Od\Utils;
 
-use Curl\Curl;
+use \Curl\Curl;
+use \Exception;
 
 class DomainListHelper
 {

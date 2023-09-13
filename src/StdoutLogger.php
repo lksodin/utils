@@ -4,6 +4,7 @@ namespace Od\Utils;
 use Monolog\Logger;
 use Monolog\Formatter\LineFormatter;
 use Monolog\Handler\StreamHandler;
+use \RuntimeException;
 
 class LoggerFactory
 {

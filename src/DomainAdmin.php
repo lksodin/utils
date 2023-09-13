@@ -2,7 +2,7 @@
 namespace Od\Utils;
 
 use \Curl\Curl;
-
+use \Exception;
 use Od\Utils\JsonValidator;
 
 class DomainAdmin
